@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "markdown-to-medium": {
+    "ng-markdown-to-medium-tool": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/markdown-to-medium",
+            "outputPath": "dist/ng-markdown-to-medium-tool",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "markdown-to-medium:build:production"
+              "buildTarget": "ng-markdown-to-medium-tool:build:production"
             },
             "development": {
-              "buildTarget": "markdown-to-medium:build:development"
+              "buildTarget": "ng-markdown-to-medium-tool:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,6 +92,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -98,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "18a0041f-0406-4a35-99bf-b298e4b928e2"
   }
 }

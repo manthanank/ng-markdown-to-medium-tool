@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'markdown-to-medium' title`, () => {
+  it(`should have the 'ng-markdown-to-medium-tool' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('markdown-to-medium');
+    expect(app.title).toEqual('ng-markdown-to-medium-tool');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, markdown-to-medium');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ng-markdown-to-medium-tool');
   });
 });

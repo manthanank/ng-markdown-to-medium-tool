@@ -1,59 +1,67 @@
-# MarkdownToMedium
+# Markdown To Medium Tool
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
+A web application that converts Markdown to Medium-compatible formatted text. Built with Angular and Material Design.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Live Markdown preview
+- Medium-style formatting
+- Copy formatted text to clipboard (supports HTML formatting)
+- Responsive design for mobile and desktop
+- Support for GitHub Flavored Markdown
+- Support for extended list formatting
 
-```bash
-ng serve
-```
+## Getting Started
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
 
-## Code scaffolding
+- Node.js (latest LTS version)
+- npm package manager
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Installation
 
-```bash
-ng generate component component-name
-```
+1. Clone the repository
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    ```bash
+    git clone https://github.com/manthanank/ng-markdown-to-medium-tool.git
+    ```
 
-```bash
-ng generate --help
-```
+2. Install dependencies:
 
-## Building
+    ```bash
+    npm install
+    ```
 
-To build the project run:
+3. Start the development server:
 
-```bash
-ng build
-```
+    ```bash
+    npm start
+    ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. Open your browser and navigate to `http://localhost:4200`
 
-## Running unit tests
+## Usage
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Type or paste your Markdown content in the left editor panel
+2. Preview the formatted text in the right panel
+3. Click the copy button to copy the formatted text
+4. Paste directly into Medium's editor
 
-```bash
-ng test
-```
+## Technology Stack
 
-## Running end-to-end tests
+- Angular 19
+- Angular Material
+- RxJS
+- Marked (for Markdown parsing)
+- marked-more-lists (for extended list support)
 
-For end-to-end (e2e) testing, run:
+## Development
 
-```bash
-ng e2e
-```
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run unit tests
+- `npm run watch` - Build in watch mode
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## License
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT License
