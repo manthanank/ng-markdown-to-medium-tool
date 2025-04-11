@@ -4,6 +4,7 @@ import { TextFieldComponent } from './components/text-field/text-field.component
 import { HalfPageComponent } from "./components/half-page/half-page.component";
 import { AppbarComponent } from "./components/app-bar/app-bar.component";
 import { TrackService } from './services/track.service';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent implements OnInit {
   title = 'ng-markdown-to-medium-tool';
 
   trackService = inject(TrackService);
+  themeService = inject(ThemeService);
 
   ngOnInit(): void {
     this.trackService.trackProjectVisit(this.title);

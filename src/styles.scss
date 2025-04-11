@@ -1,14 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
+:root {
+  --bg-color: #f5f7f9;
+  --text-color: #2c3e50;
+  --border-color: #e0e0e0;
+  --editor-bg: #fff;
+  --code-bg: #f5f7f9;
+  --focus-border: #1976d2;
+  --header-color: #2c3e50;
+  --subheader-color: #546e7a;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --border-color: #424242;
+  --editor-bg: #1e1e1e;
+  --code-bg: #2a2a2a;
+  --focus-border: #64b5f6;
+  --header-color: #e0e0e0;
+  --subheader-color: #b0bec5;
+
+  /* Override Material toolbar color in dark mode */
+  .mat-toolbar.mat-primary {
+    background: #212121;
+    color: #ffffff;
+  }
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
-  background-color: #f5f7f9;
-  color: #2c3e50;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Ensure proper coloring of markdown headings in preview */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header-color);
+}
+
+/* Fix for webkit browsers to ensure transitions work on all elements */
+* {
+  -webkit-transition: inherit;
 }

@@ -33,14 +33,16 @@ import { MarkdownService } from '../../services/markdown.service';
         font-family: 'Roboto Mono', monospace;
         font-size: 14px;
         line-height: 1.6;
-        border: 1px solid #e0e0e0;
+        border: 1px solid var(--border-color);
         border-radius: 4px;
         resize: none;
         outline: none;
-        transition: border-color 0.2s;
+        transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+        background-color: var(--editor-bg);
+        color: var(--text-color);
 
         &:focus {
-          border-color: #1976d2;
+          border-color: var(--focus-border);
         }
 
         @media (max-width: 768px) {

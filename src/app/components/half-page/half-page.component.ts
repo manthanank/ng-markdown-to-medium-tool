@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-halfpage',
+  imports: [],
   template: `
     <div class="halfpage">
       <div class="header">
@@ -21,7 +22,8 @@ import { Component, Input } from '@angular/core';
       display: flex;
       flex-direction: column;
       padding: 20px;
-      background: #fff;
+      background: var(--editor-bg);
+      transition: background-color 0.3s;
 
       @media (max-width: 768px) {
         padding: 12px;
@@ -31,7 +33,7 @@ import { Component, Input } from '@angular/core';
     .header {
       margin-bottom: 16px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid var(--border-color);
 
       @media (max-width: 768px) {
         margin-bottom: 12px;
@@ -42,7 +44,7 @@ import { Component, Input } from '@angular/core';
       margin: 0;
       font-size: 18px;
       font-weight: 500;
-      color: #2c3e50;
+      color: var(--text-color);
 
       @media (max-width: 768px) {
         font-size: 16px;
@@ -53,7 +55,12 @@ import { Component, Input } from '@angular/core';
       display: block;
       margin-top: 4px;
       font-size: 14px;
-      color: #666;
+      color: var(--text-color);
+      opacity: 0.7;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
 
     .content {

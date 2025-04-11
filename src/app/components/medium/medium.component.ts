@@ -33,8 +33,9 @@ import markedMoreLists from 'marked-more-lists';
       .preview-container {
         height: 100%;
         padding: 8px;
-        background: #fff;
+        background: var(--editor-bg);
         position: relative;
+        transition: background-color 0.3s;
 
         @media (max-width: 768px) {
           padding: 4px;
@@ -46,13 +47,14 @@ import markedMoreLists from 'marked-more-lists';
         top: 16px;
         right: 16px;
         z-index: 1;
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--editor-bg);
         border-radius: 4px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         padding: 4px;
+        transition: background-color 0.3s;
 
         button {
-          color: #1976d2;
+          color: var(--focus-border);
 
           &:hover {
             background-color: rgba(25, 118, 210, 0.04);
@@ -65,7 +67,8 @@ import markedMoreLists from 'marked-more-lists';
         font-family: 'Georgia', serif;
         font-size: 16px;
         line-height: 1.8;
-        color: #2c3e50;
+        color: var(--text-color);
+        transition: color 0.3s;
 
         @media (max-width: 768px) {
           padding: 12px;
@@ -77,6 +80,7 @@ import markedMoreLists from 'marked-more-lists';
           h2,
           h3 {
             margin-top: 24px;
+            color: var(--text-color);
 
             @media (max-width: 768px) {
               margin-top: 16px;
@@ -87,12 +91,12 @@ import markedMoreLists from 'marked-more-lists';
             margin: 16px 0;
           }
           code {
-            background: #f5f7f9;
+            background: var(--code-bg);
             padding: 2px 4px;
             border-radius: 3px;
           }
           pre {
-            background: #f5f7f9;
+            background: var(--code-bg);
             padding: 16px;
             border-radius: 4px;
 
